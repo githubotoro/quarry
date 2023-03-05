@@ -43,8 +43,8 @@ export default function Home() {
 						<b>TvT</b>
 						<br />
 						<br />
-						<i>Fret' Not!</i> I created <b>savegames</b> for every
-						important decision that follows the best ending (
+						<i>Fret{"'"} Not!</i> I created <b>savegames</b> for
+						every important decision that follows the best ending (
 						<b>everyone</b> lives + <b>12</b> chapter trophies +{" "}
 						<b>most</b> collectibles)
 						<br />
