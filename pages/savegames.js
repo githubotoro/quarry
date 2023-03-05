@@ -32,14 +32,20 @@ const Savegames = () => {
 					content="Let's end the curse of the Hag of Hackett's Quarry together."
 				/>
 				<meta name="twitter:creator" content="@yupuday" />
-				<meta property="twitter:image:src" content="" />
+				<meta
+					property="twitter:image:src"
+					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
+				/>
 				<meta property="og:url" content="https://quarry.vercel.app/" />
 				<meta property="og:title" content="The Quarry Savegames" />
 				<meta
 					property="og:description"
 					content="Let's Create Better Forms!"
 				/>
-				<meta property="og:image" content="" />
+				<meta
+					property="og:image"
+					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
+				/>
 
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
