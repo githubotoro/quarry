@@ -48,9 +48,7 @@ export default function Home() {
 						</b>{" "}
 						<br />
 					</div>
-					<div className="max-w-4xl italic text-red-600 mt-3 font-bold ">
-						"coz' what doesn't kill you, makes you stronger!"
-					</div>
+					<div className="max-w-4xl italic text-red-600 mt-3 font-bold "></div>
 				</div>
 
 				<div className="p-3 flex flex-col w-full items-center">
