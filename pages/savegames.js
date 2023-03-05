@@ -2,6 +2,7 @@ import { Saves } from "@/data/saves";
 import { Downloads } from "@/data/downloads";
 import { useState } from "react";
 import { InvisibleNavbar } from "@/components/InvisibleNavbar";
+import { motion } from "framer-motion";
 
 const Savegames = () => {
 	const saveLocation = `C:\\Users\\<YOUR_PC_NAME>\\AppData\\Local\\TheQuarry\\Saved\\SaveGames`;
@@ -15,40 +16,51 @@ const Savegames = () => {
                  bg-isBlack text-isGrayLight5 p-3"
 			>
 				<InvisibleNavbar />
-				<div className="w-full max-w-6xl flex flex-col items-center place-content-start min-h-screen">
+				<div className="w-full max-w-6xl flex flex-col items-center place-content-start min-h-screen pb-12">
 					<div className="flex flex-row pb-2 items-center place-content-center mt-8">
 						<div className="flex flex-col items-center text-lg md:text-2xl lg:text-3xl font-black ">
 							Select Chapter
 						</div>
-						<div className="flex flex-col items-center ml-3 bg-transparent rounded-full">
-							<svg
+						<div
+							className="flex flex-col items-center ml-3 bg-transparent rounded-full
+						focus:outline-none outline-none"
+						>
+							<motion.svg
+								whileTap={{
+									scale: 0.5,
+									transition: { duration: 0.03 },
+								}}
 								onClick={() => {
 									setInfoOpen(!infoOpen);
 								}}
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								className="w-6 h-6 md:w-8 md:h-8 stroke-isGrayLight5 stroke-2 fill-isBlueDarkEmphasis
-								hover:fill-isBlueDark transition duration-300 ease-in-out cursor-pointer"
+								hover:fill-isBlueDark transition duration-300 ease-in-out cursor-pointer focus:outline-none outline-none"
 							>
 								<path
 									strokeLinecap="round"
 									strokeLinejoin="round"
 									d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
 								/>
-							</svg>
+							</motion.svg>
 						</div>
 					</div>
 
 					<div className="w-full flex flex-row space-x-1 md:space-x-2 items-center place-content-center">
 						{Object.keys(Saves).map((chap, chapIndex) => {
 							return (
-								<div
+								<motion.div
+									whileTap={{
+										scale: 0.9,
+										transition: { duration: 0.03 },
+									}}
 									onClick={() => {
 										setCurrChap(`chap${chapIndex}`);
 									}}
 									className={`p-1 w-9 flex flex-col items-center rounded-lg font-black
 									transition duration-300 ease-in-out cursor-pointer 
-									text-sm md:text-md lg:text-lg
+									text-sm md:text-md lg:text-lg focus:outline-none outline-none
 									
 									${
 										currChap === `chap${chapIndex}`
@@ -59,7 +71,7 @@ const Savegames = () => {
 									key={chapIndex}
 								>
 									{chapIndex}
-								</div>
+								</motion.div>
 							);
 						})}
 					</div>
@@ -92,7 +104,13 @@ const Savegames = () => {
 									"
 									>
 										<div className="w-full h-full flex flex-col items-center place-content-center">
-											<a
+											<motion.a
+												whileTap={{
+													scale: 0.9,
+													transition: {
+														duration: 0.03,
+													},
+												}}
 												href={`https://drive.google.com/uc?export=download&id=${
 													Downloads[save.saveid]
 												}`}
@@ -100,7 +118,7 @@ const Savegames = () => {
 												className="w-12 h-12 flex flex-col items-center place-content-center
 												bg-transparent group-hover:bg-isGreenDarkEmphasis											
 											 group-hover:hover:bg-isGreenDark cursor-pointer rounded-xl
-											transition duration-300 ease-in-out
+											transition duration-300 ease-in-out focus:outline-none outline-none
 											
 											"
 											>
@@ -115,7 +133,7 @@ const Savegames = () => {
 														clipRule="evenodd"
 													/>
 												</svg>
-											</a>
+											</motion.a>
 										</div>
 									</div>
 								</div>
@@ -150,7 +168,7 @@ const Savegames = () => {
 						text-sm md:text-md lg:text-lg font-black py-1 px-2"
 						>
 							p.s., just exit to main menu, paste the save and
-							resume -- no need to exit the game completely.
+							resume -- no need to exit the game completely :)
 						</div>
 					</div>
 				</div>

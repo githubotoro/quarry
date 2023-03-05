@@ -1,10 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-
-import HomeImage from "../public/assets/home.png";
-
-const inter = Inter({ subsets: ["latin"] });
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { InvisibleNavbar } from "@/components/InvisibleNavbar";
 
 export default function Home() {
 	return (
@@ -21,8 +18,9 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="w-full min-h-screen bg-black">
-				<div className="w-full h-full flex flex-col items-center place-content-center p-3">
+			<main className="w-full min-h-screen bg-black font-mono">
+				<InvisibleNavbar />
+				<div className="mt-5 w-full h-full flex flex-col items-center place-content-center p-3">
 					<div className="w-full h-full">
 						<img
 							src="./assets/home.png"
@@ -38,27 +36,61 @@ export default function Home() {
 
 				<div
 					className="p-3 flex flex-col items-center content-center text-center w-full text-white 
-          drop-shadow-2xl text-md lg:text-2xl font-medium "
+          drop-shadow-2xl text-md lg:text-2xl font-mono mt-[30px]"
 				>
 					<div className="mt-[40px] sm:mt-[10px] md:mt-[0px] max-w-xl lg:max-w-4xl leading-5 sm:leading-6 lg:leading-7">
-						We got <b>all</b> save game files for <i>every fking</i>{" "}
-						decision to get that perfect ending --{" "}
-						<b>
-							everyone lives + tarot cards + collectible trophies.
-						</b>{" "}
+						<b>Messed</b> up QTE / took a <i>wrong</i> decision?{" "}
+						<b>TvT</b>
 						<br />
+						<br />
+						<i>Fret' Not!</i> I created <b>savegames</b> for every
+						important decision that follows the best ending (
+						<b>everyone</b> lives + <b>12</b> chapter trophies +{" "}
+						<b>most</b> collectibles)
+						<br />
+						<br />
+						Just <i>pick</i> the decision where you messed up,&nbsp;
+						<b>download</b>&nbsp;savegame and start <b>playing</b>{" "}
+						:)
 					</div>
 					<div className="max-w-4xl italic text-red-600 mt-3 font-bold "></div>
-				</div>
 
-				<div className="p-3 flex flex-col w-full items-center">
-					<div className="grid grid-cols-4 max-w-5xl">
-						<div
-							className="font-mono flex flex-col items-center w-full bg-stone-500 text-xl text-center rounded-lg py-[3px] px-[12px]
-            font-semibold text-slate-200 "
+					<Link
+						target="_self"
+						rel="noopener noreferrer"
+						href={{
+							pathname: "/savegames",
+						}}
+					>
+						<motion.button
+							whileTap={{
+								scale: 0.9,
+								transition: {
+									duration: 0.03,
+								},
+							}}
+							className="mt-4 flex flex-col items-center bg-isRedDarkEmphasis hover:bg-isRedDark
+			text-isWhite py-1 px-4 text-lg md:text-xl lg:text-2xl rounded-xl font-black cursor-pointer
+			transition duration-300 ease-in-out"
 						>
-							Select Savegame
-						</div>
+							Click here to start!
+						</motion.button>
+					</Link>
+
+					<div className="mt-[90px] flex flex-row items-center mb-3">
+						created by&nbsp;
+						<Link
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://twitter.com/yupuday"
+						>
+							<span
+								className="bg-isBlueDarkEmphasis hover:bg-isBlueDark px-3 py-1 rounded-xl font-black
+							transition duration-300 ease-in-out"
+							>
+								<b>@yupuday</b>
+							</span>
+						</Link>
 					</div>
 				</div>
 			</main>
