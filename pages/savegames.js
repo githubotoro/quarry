@@ -40,7 +40,7 @@ const Savegames = () => {
 				<meta property="og:title" content="The Quarry Savegames" />
 				<meta
 					property="og:description"
-					content="Let's Create Better Forms!"
+					content="Let's end the curse of the Hag of Hackett's Quarry together."
 				/>
 				<meta
 					property="og:image"
