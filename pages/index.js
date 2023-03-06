@@ -3,9 +3,25 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { InvisibleNavbar } from "@/components/InvisibleNavbar";
 import { GoogleAnalytics, usePageViews } from "nextjs-google-analytics";
+import * as gtag from "../lib/gtag";
+import Script from "next/script";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
 export default function Home() {
 	usePageViews({ ignoreHashChange: true });
+
+	const router = useRouter();
+
+	useEffect(() => {
+		const handleRouteChange = (url) => {
+			gtag.pageview(url);
+		};
+		router.events.on("routeChangeComplete", handleRouteChange);
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChange);
+		};
+	}, [router.events]);
 
 	return (
 		<>
@@ -114,6 +130,19 @@ export default function Home() {
 					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
 				/>
 				<link rel="icon" href="/favicon.ico" />
+
+				<Script
+					strategy="afterInteractive"
+					src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+				/>
+
+				<Script
+					id="google-analytics"
+					strategy="afterInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', { page_path: window.location.pathname, });`,
+					}}
+				/>
 			</Head>
 			<GoogleAnalytics />
 			<main className="w-full min-h-screen bg-black font-mono">
