@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
 				}}
 			/> */}
 
-			<GoogleAnalytics trackPageViews />
+			<GoogleAnalytics trackPageViews={{ ignoreHashChange: true }} />
 
 			<Navbar />
 			<Component {...pageProps} />

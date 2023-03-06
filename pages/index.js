@@ -2,8 +2,11 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { InvisibleNavbar } from "@/components/InvisibleNavbar";
+import { GoogleAnalytics, usePageViews } from "nextjs-google-analytics";
 
 export default function Home() {
+	usePageViews({ ignoreHashChange: true });
+
 	return (
 		<>
 			<Head>
@@ -112,6 +115,7 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<GoogleAnalytics />
 			<main className="w-full min-h-screen bg-black font-mono">
 				<InvisibleNavbar />
 				<div className="mt-5 w-full h-full flex flex-col items-center place-content-center p-3">
