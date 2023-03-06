@@ -17,13 +17,13 @@ export default function Home() {
 					content="width=device-width, initial-scale=1"
 				/>
 
-				<meta itemprop="name" content="The Quarry Savegames " />
+				<meta itemProp="name" content="The Quarry Savegames " />
 				<meta
-					itemprop="description"
+					itemProp="description"
 					content="Let's end the curse of the Hag of Hackett's Quarry together."
 				/>
 				<meta
-					itemprop="image"
+					itemProp="image"
 					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
 				/>
 
