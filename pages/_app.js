@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
 		<>
 			<Script
 				strategy="afterInteractive"
-				src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+				src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
 			/>
 
 			<Script
