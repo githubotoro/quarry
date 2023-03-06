@@ -131,12 +131,12 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 
-				<Script
+				<script
 					strategy="afterInteractive"
 					src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
 				/>
 
-				<Script
+				<script
 					id="google-analytics"
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
