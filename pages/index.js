@@ -27,102 +27,54 @@ export default function Home() {
 		<>
 			<Head>
 				<title>The Quarry Savegames</title>
-				<meta
-					name="description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
-				/>
+				<meta charset="UTF-8" />
 				<meta
 					name="viewport"
-					content="width=device-width, initial-scale=1"
-				/>
-
-				<meta itemProp="name" content="The Quarry Savegames " />
-				<meta
-					itemProp="description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
-				/>
-				<meta
-					itemProp="image"
-					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
-				/>
-
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="The Quarry Savegames" />
-				<meta
-					name="twitter:description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
-				/>
-				<meta
-					name="twitter:image"
-					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
-				/>
-
-				<meta property="og:url" content="https://quarry.vercel.app" />
-				<meta property="og:type" content="website" />
-				<meta property="og:title" content="The Quarry Savegames" />
-				<meta
-					property="og:description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
-				/>
-				<meta
-					property="og:image"
-					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
-				/>
-
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@yupuday" />
-				<meta name="twitter:account_id" content="1460479438911537152" />
-				<meta property="twitter:title" content="The Quarry Savegames" />
-				<meta
-					property="twitter:description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
-				/>
-				<meta name="twitter:creator" content="@yupuday" />
-				<meta
-					property="twitter:image:src"
-					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
-				/>
-				<meta property="og:url" content="https://quarry.vercel.app/" />
-				<meta property="og:title" content="The Quarry Savegames" />
-				<meta
-					property="og:description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
-				/>
-				<meta
-					property="og:image"
-					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
+					content="width=device-width,initial-scale=1"
 				/>
 
 				<meta property="og:url" content="https://quarry.vercel.app/" />
 				<meta property="og:type" content="website" />
-				<meta property="og:title" content="The Quarry Savegames" />
+				<meta
+					property="og:title"
+					content="The Quarry Savegames -- Get your perfect ending today!"
+				/>
 				<meta
 					property="og:description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
+					content="The Quarry doesn't have any 'Save' option, so I played the 
+					entire game + created saves for all the major decisions which lead to perfect ending 
+					(everyone lives + 12 chapter trophies + most collectibles) -- just choose
+					your save file and start playing! :)"
 				/>
 				<meta
 					property="og:image"
 					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
 				/>
-
 				<meta
 					name="description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
+					content="The Quarry doesn't have any 'Save' option, so I played the 
+					entire game + created saves for all the major decisions which lead to perfect ending 
+					(everyone lives + 12 chapter trophies + most collectibles) -- just choose
+					your save file and start playing! :)"
 				/>
-
 				<meta
 					name="keywords"
-					content="quarry, savegames, everyone lives"
+					content="the quarry, hackett, savegames, 2K"
 				/>
 				<meta name="author" content="Uday Khokhariya" />
-
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@yupuday" />
 				<meta name="twitter:account_id" content="1460479438911537152" />
-				<meta property="twitter:title" content="The Quarry Savegames" />
+				<meta
+					property="twitter:title"
+					content="The Quarry Savegames -- Get your perfect ending today!"
+				/>
 				<meta
 					property="twitter:description"
-					content="Let's end the curse of the Hag of Hackett's Quarry together."
+					content="The Quarry doesn't have any 'Save' option, so I played the 
+					entire game + created saves for all the major decisions which lead to perfect ending 
+					(everyone lives + 12 chapter trophies + most collectibles) -- just choose
+					your save file and start playing! :)"
 				/>
 				<meta name="twitter:creator" content="@yupuday" />
 				<meta
@@ -130,25 +82,8 @@ export default function Home() {
 					content="https://raw.githubusercontent.com/githubotoro/quarry/main/public/assets/splash.png"
 				/>
 				<link rel="icon" href="/favicon.ico" />
-
-				<script
-					async
-					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
-				/>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-					}}
-				/>
 			</Head>
-			<GoogleAnalytics />
+
 			<main className="w-full min-h-screen bg-black font-mono">
 				<InvisibleNavbar />
 				<div className="mt-5 w-full h-full flex flex-col items-center place-content-center p-3">
