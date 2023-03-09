@@ -11,6 +11,7 @@ import { doc, getDoc, setDoc, increment, FieldValue } from "firebase/firestore";
 const Savegames = () => {
 	const saveLocation = `C:\\Users\\<YOUR_PC_NAME>\\AppData\\Local\\TheQuarry\\Saved\\SaveGames`;
 	const [currChap, setCurrChap] = useState("chap0");
+	const [currIndex, setCurrIndex] = useState(0);
 
 	const incrementDownloads = async () => {
 		try {
@@ -27,7 +28,7 @@ const Savegames = () => {
 	return (
 		<>
 			<Head>
-				<title>The Quarry -- Chapter {currChap[4]}</title>
+				<title>The Quarry -- Chapter {currIndex}</title>
 				<meta
 					name="description"
 					content="Welcome to the Hag of the Hackett's Quarry"
@@ -80,6 +81,7 @@ const Savegames = () => {
 									}}
 									onClick={() => {
 										setCurrChap(`chap${chapIndex}`);
+										setCurrIndex(chapIndex);
 									}}
 									className={`p-1 w-9 flex flex-col items-center rounded-lg font-black
 									transition duration-300 ease-in-out cursor-pointer 
