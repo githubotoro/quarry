@@ -34,6 +34,7 @@ const Savegames = () => {
 					content="Welcome to the Hag of the Hackett's Quarry"
 				/>
 			</Head>
+
 			<div
 				className={`font-mono flex flex-col items-center place-content-start w-full min-h-screen
                  bg-isBlack text-isGrayLight5 p-3 `}
