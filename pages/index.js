@@ -27,6 +27,10 @@ export default function Home() {
 		<>
 			<Head>
 				<title>The Quarry Savegames</title>
+				<meta
+					name="description"
+					content="Get your perfect ending today!"
+				/>
 				<meta charset="UTF-8" />
 				<meta
 					name="viewport"
