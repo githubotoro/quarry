@@ -15,11 +15,13 @@ const Savegames = () => {
 
 	const incrementDownloads = async () => {
 		try {
-			const docRef = doc(db, "quarry", "downloads");
+			const res = await fetch("/api/increment");
 
-			await setDoc(docRef, {
-				curr: (await getDoc(docRef)).data().curr + 1,
-			});
+			// const docRef = doc(db, "quarry", "downloads");
+
+			// await setDoc(docRef, {
+			// 	curr: (await getDoc(docRef)).data().curr + 1,
+			// });
 		} catch (err) {
 			console.log(err);
 		}
